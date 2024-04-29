@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int partition(int arr[], int start, int end){
+int swap(int arr[], int start, int end){
     int pv =arr[end];
     int i=start-1;
     
@@ -25,9 +25,9 @@ void quicksort (int arr[], int start, int end){
     
     if(end<=start) return;
         
-    int pv = partition(arr,start,end);
-    quicksort(arr,start,pv-1);
-    quicksort(arr,pv+1, end);
+    int pv = swap(arr,start,end);
+    swap(arr,start,pv-1);
+    swap(arr,pv+1, end);
 }
 
 
